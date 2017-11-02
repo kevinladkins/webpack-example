@@ -1,0 +1,33 @@
+body {
+  font-family: Arial;
+}
+
+img {
+  display: block;
+  border: 1px black solid;
+  max-height: 200px;
+  max-width: 200px;
+}
+
+ul {
+  width: 60%;
+  list-style-position: inside;
+}
+
+#root {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#commentsDiv {
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+
+#albumsDiv ul {
+  margin: 20px auto 0;
+  text-align: left;
+  list-style-type: none;
+}
