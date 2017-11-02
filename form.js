@@ -1,24 +1,30 @@
-var form = document.createElement('form');
-var textArea = document.createElement('textarea');
-var submit = document.createElement('button');
-var comments = document.createElement('ul');
 
-textArea.type = 'textarea';
-textArea.rows = '4';
-textArea.cols = '50';
+  var form = document.createElement('form');
+  var textArea = document.createElement('textarea');
+  var submit = document.createElement('button');
+  var comments = document.createElement('ul');
 
-submit.type = 'submit';
-submit.innerHTML = 'Submit';
+  form.appendChild(textArea);
+  form.appendChild(submit);
 
-function addLi() {
-  return document.createElement('li');
-}
+  textArea.type = 'textarea';
+  textArea.rows = '4';
+  textArea.cols = '50';
 
-function listComments(event) {
-  event.preventDefault();
-  var entry = textArea.value;
-  var comment = addLi();
-  comment.innerHTML = entry
-  comments.appendChild(comment);
-  textArea.value = '';
-}
+  submit.type = 'submit';
+  submit.innerHTML = 'Submit';
+
+  function addLi() {
+    return document.createElement('li');
+  }
+
+  function listComments(event) {
+    event.preventDefault();
+    var entry = textArea.value;
+    var comment = addLi();
+    comment.innerHTML = entry
+    comments.appendChild(comment);
+    textArea.value = '';
+  }
+
+module.exports = {form, textArea, submit, comments, listComments }

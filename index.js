@@ -1,30 +1,34 @@
+var form = require('./form.js');
+var headers = require('./headers.js');
+var ajax = require('./ajax.js');
+
 var root = document.querySelector('#root');
 
 //Build Comments section
 
 var commentsDiv = document.createElement('div');
-root.appendChild(pageHeader);
+root.appendChild(headers.pageHeader);
 root.appendChild(commentsDiv);
-commentsDiv.appendChild(commentsHeader);
-commentsDiv.appendChild(form);
-commentsDiv.appendChild(comments);
-form.appendChild(textArea);
-form.appendChild(submit);
+commentsDiv.appendChild(headers.commentsHeader);
+commentsDiv.appendChild(form.form);
+commentsDiv.appendChild(form.comments);
 
-submit.addEventListener('click', listComments)
+form.submit.addEventListener('click', form.listComments)
 
 commentsDiv.id="commentsDiv";
-comments.id = 'comments';
+form.comments.id = 'comments';
 
 //Build albums section
 
 var albumsDiv = document.createElement('div');
 var button = document.createElement('button');
 root.appendChild(albumsDiv);
-albumsDiv.appendChild(albumsHeader);
+albumsDiv.appendChild(headers.albumsHeader);
 albumsDiv.appendChild(button);
 
-button.addEventListener('click', getAlbums);
+debugger
+
+button.addEventListener('click', ajax.getAlbums);
 
 button.innerHTML = 'Sure!';
 albumsDiv.id = "albumsDiv";
