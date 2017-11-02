@@ -18,7 +18,8 @@
     "url": "https://github.com/kevinladkins/webpack-example/issues"
   },
   "homepage": "https://github.com/kevinladkins/webpack-example#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "webpack": "^3.8.1"
   }
 }
